@@ -1,0 +1,18 @@
+# Build directories (CLion & CMake)
+cmake-build-*/
+build/
+out/
+
+# IDE files
+.idea/
+
+# vcpkg dependencies (Keep them local!)
+vcpkg/
+vcpkg_installed/
+
+# Models and media files
+*.onnx
+*.mp4
+*.avi
+*.png
+*.jpg
