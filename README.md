@@ -40,16 +40,15 @@ The ONNX model expects a strict `[?, 1, 224, 224]` input tensor. To process an a
 
 ## 📊 Benchmarks
 
-*Hardware: Intel Core i5 (X Cores, X GHz)*
+*Hardware: Intel CPU (Edge / Mini-PC)*
 *Model: ESPCN (Sub-Pixel CNN) x3 Upscaling*
 
-| Operation | Resolution (In -> Out) | Inference Time (Avg per Frame) |
-| :--- | :--- | :--- |
-| **Single Tile** | 224x224 -> 672x672 | ~25 ms |
-| **Full Frame** | 640x360 -> 1920x1080 | [X] ms / [Y] FPS |
+| Operation | Resolution (In -> Out) | Inference Time | Total Pipeline Performance |
+| :--- | :--- | :--- | :--- |
+| **Single Tile** | 224x224 -> 672x672 | ~14.8 ms | - |
+| **Full Frame (6 Tiles)** | 640x360 -> 1920x1080 | 89.06 ms | **9.91 FPS** |
 
-*(Note: Replace [X] and [Y] with your actual metrics after running the full video loop).*
-
+*Note: Benchmarks include the full End-to-End pipeline (Video decoding, YCrCb color space splitting, OpenVINO dynamic batch inference, chroma bicubic interpolation, color merging, and video encoding).*
 ---
 
 ## 🛠️ Build Instructions
