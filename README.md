@@ -7,13 +7,15 @@
 
 > **Zero-GPU, Edge-Ready AI Video Enhancement.** > A pure C++ pipeline demonstrating industrial-grade inference optimization for standard Intel CPUs.
 
-## 🚀 The Vision
+## 🚀 The Vision: AI for Industrial Inspection & NDT
 
-Deploying heavy Deep Learning models usually requires expensive GPU infrastructure, creating a massive barrier to entry for SMBs and edge-device applications. **EdgeSR** bridges this gap.
+In Non-Destructive Testing (NDT) and industrial maintenance, field engineers rely on borescopes and fiberscopes to inspect critical infrastructure (e.g., turbine blades, pipelines). Due to physical constraints, these optical sensors often produce noisy, low-resolution, and heavily artifacted video footage.
 
-This repository demonstrates how to architect a highly optimized, bare-metal C++ pipeline that leverages OpenVINO and hardware-specific SIMD (AVX2/AVX-512) instructions to perform real-time (or near real-time) Video Super-Resolution entirely on a standard CPU.
+Deploying heavy Deep Learning models to enhance this footage traditionally requires expensive GPU infrastructure, which is impossible in rugged, offline field environments.
 
-It is built for performance, memory safety, and minimal deployment overhead.
+**EdgeSR** bridges this gap.
+
+This repository demonstrates a bare-metal, pure C++ pipeline engineered specifically for **Software-Defined Optics** in the field. By leveraging OpenVINO and hardware-specific SIMD instructions, it performs real-time Video Super-Resolution and artifact reduction entirely on standard, low-power CPUs. It turns grainy borescope footage into clear, actionable intelligence—with zero GPU dependency.
 
 ---
 
